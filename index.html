@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopVibe | Simple Store</title>
+    
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <!-- 2. HTML (STRUCTURE) -->
+
+    <!-- Navigation -->
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">🛍️ ShopVibe</a>
+            <button class="cart-btn" onclick="toggleCart()">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Welcome to ShopVibe</h1>
+        <p>Simple, Fast, and Reliable Shopping.</p>
+    </section>
+
+    <!-- Filters -->
+    <div class="filters">
+        <button class="filter-btn active" onclick="filterProducts('all', event)">All Items</button>
+        <button class="filter-btn" onclick="filterProducts('clothing', event)">Clothing 👕</button>
+        <button class="filter-btn" onclick="filterProducts('electronics', event)">Electronics 📱</button>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="container">
+        <div id="product-list" class="product-grid">
+            <!-- Items will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="toggleCart()">×</button>
+            <h2>Your Shopping Cart</h2>
+            <div id="cart-items">
+                <p>Your cart is empty.</p>
+            </div>
+            <div style="margin-top: 20px; text-align: right; font-weight: bold; font-size: 1.2rem;">
+                Total: ₹<span id="cart-total">0</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Checkout Now</button>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file for logic -->
+    <script src="script.js"></script>
+
+</body>
+</html>
